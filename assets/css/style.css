@@ -1,0 +1,253 @@
+/* 
+=======================
+Reset All Browser Presets
+=======================
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 
+=======================
+Define The Parameters
+=======================
+*/
+:root{
+  --clr-primary:#219ebc;
+  --clr-primary-light:#8ecae6;
+  --clr-primary-dark:#023047;
+  --clr-grey-1: #2b2b2b;
+  --clr-grey-2:#636363;
+  --clr-grey-3:#a4a2a2;
+  --clr-grey-4:#d5d5d5;
+  --clr-grey-5:rgb(246, 246, 246);
+  --clr-white:#fff;
+  --ff-primary: 'Courier New', Courier, monospace;
+  --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --dark-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  --transition: all 0.3s ease;
+  --radius: 0.5rem;
+}
+
+/* 
+=======================
+General Style
+=======================
+*/
+body{
+  font-family:var(--ff-primary);
+}
+h1,h2,h3,h4,h5,h6{
+  padding: 1rem 0.5rem;
+}
+
+
+/* 
+=======================
+Global Style
+=======================
+*/
+.container{
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.text-muted {
+  color: var(--clr-grey-3);
+}
+.text-primary {
+  color: var(--clr-primary);
+}
+.text-light {
+  color: var(--clr-primary-light);
+}
+.text-dark {
+  color: var(--clr-primary-dark);
+}
+.text-center{
+  text-align: center;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+.mb-3{
+  margin-bottom: 1rem;
+}
+.mb-4{
+  margin-bottom: 1.5rem;
+}
+.mb-5{
+  margin-bottom: 3rem;
+}
+
+
+
+
+.form-control{
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 0;
+  background: var(--clr-grey-5);
+  border-radius: 0.25rem; 
+}
+.form-radio {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+/* 
+=======================
+Header
+=======================
+*/
+.hero{
+  background: linear-gradient(to top,rgba(2,48,71,0.8),rgba(2,48,71,0.6)),
+  url("../images/hero.jpg"), center/cover no-repeat fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner h1{
+  animation: move-to-down 2s linear;
+} 
+
+.hero-banner h3 {
+  color: var(--clr-white);
+  max-width: 35rem;
+  animation: move-to-up 3s ease;
+}
+/* 
+=======================
+main
+======================= 
+*/
+.main {
+  background: linear-gradient(to top,rgba(255,255,255,0.8),rgba(255,255,255,0.8)),
+  url('../images/chart.jpg'), center/cover no-repeat fixed;
+}
+
+.parameters-card {
+  margin-top: 2rem;
+  background: rgba(246,246,246,0.7);
+  box-shadow: var(--light-shadow);
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.parameters-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+.chart-card {
+  margin-top: 2rem;
+  background: rgba(246,246,246,0.7);
+  box-shadow: var(--light-shadow);
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.chart-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+
+/* 
+=======================
+Footer
+=======================
+*/
+footer{
+  background: var(--clr-primary-dark);
+}
+.copyright{
+  text-align: center;
+}
+
+/* 
+=======================
+Media Queries
+=======================
+*/
+@media screen and (min-width:600px) {
+  .parameters-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .parameter-year{
+    align-self: flex-start;
+    flex: 0 0 calc(25% - 1rem);
+  }
+  .parameter-chart-data {
+    align-self: flex-start;
+    flex: 0 0 calc((75% - 1rem));
+  }  
+}
+@media screen and (min-width:997px) {
+  .main-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .parameters {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+  .chart {
+    flex: 0 0 calc(66.67% - 1rem);
+  }
+  .parameters-form{
+    display: block;
+  }
+
+  .parameter-chart-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+}
+
+/* 
+=======================
+Animations
+=======================
+*/
+
+@keyframes move-to-up {
+  0%{
+transform: translateY(100%);
+  }
+  100%{
+transform: translateY(0);
+  }
+}
+@keyframes move-to-down {
+  0%{
+transform: translateY(-100%);
+  }
+  100%{
+transform: translateY(0);
+  }
+}

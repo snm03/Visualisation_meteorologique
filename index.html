@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D3 Project | Sinem Kilic</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <section class="hero">
+      <div class="hero-banner">
+        <h1 class="text-light text-center">Visualizing Seattle Weather</h1>
+        <h3 class="text-center">
+          Seattle is a seaport city on the West Coast of the United States. It is the seat of King County, Washington.
+        </h3>
+      </div>
+    </section>
+  </header>
+  <main class="main">
+    <div class="main-content container">
+      <aside class="parameters">
+        <section class="parameters-content">
+          <div class="parameters-card">
+            <form action="#" class="parameters-form">
+              <div class="parameter-year" id="parameter-year">
+                <lable for="year">Year:</lable>
+                <select class="form-control" name="year" id="year">
+                  <option value="">2012 - 2015</option>
+                  <option selected value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                </select>
+              </div>
+              <div class="parameter-chart-data" id="parameter-chart-data">
+                <p class="mb-2">Select Data:</p>
+                <div class="input-group">
+                  <input class="form-radio" type="radio" id="weather" name="chart_data" checked value="weather">
+                  <label for="weather">Weather</label>
+                  <input class="form-radio" type="radio" id="precipitation" name="chart_data" value="precipitation">
+                  <label for="precipitation">Precipitation</label>
+                  <input class="form-radio" type="radio" id="temp" name="chart_data" value="temp">
+                  <label for="temp">Min-Max Temp</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </aside>
+      <section class="chart">
+        <div class="chart-card">
+          <div id="d3"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p class="copyright text-muted">&copy; Programmed and design by Sinem Kilic</p>
+    </div>
+  </footer>
+
+  <!-- load the d3.js library -->
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <!-- load js -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
